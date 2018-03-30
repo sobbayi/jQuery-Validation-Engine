@@ -77,13 +77,13 @@
                 },
                 "phone": {
                     // credit: jquery.h5validate.js / orefalo
-                    "regex": /^([\+][0-9]{1,3}[\ \.\-])?([\(]{1}[0-9]{2,6}[\)])?([0-9\ \.\-\/]{3,20})((x|ext|extension)[\ ]?[0-9]{1,4})?$/,
+                    "regex": /^([\+][0-9]{1,3}([ \.\-])?)?([\(][0-9]{1,6}[\)])?([0-9 \.\-]{1,32})(([A-Za-z \:]{1,11})?[0-9]{1,4}?)$/,
                     "alertText": "* Vigane telefoni number"
                 },
                 "email": {
                     // Shamelessly lifted from Scott Gonzalez via the Bassistance Validation plugin http://projects.scottsplayground.com/email_address_validation/
                     "regex": /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-                    "alertText": "* Vigane emaili aadres"
+                    "alertText": "* Vigane e-posti aadress"
                 },
                 "integer": {
                     "regex": /^[\-\+]?\d+$/,
@@ -112,6 +112,10 @@
                 },
                 "onlyLetterSp": {
                     "regex": /^[a-zA-Z\ \']+$/,
+                    "alertText": "* Tähed ainult"
+                },
+				"onlyLetterAccentSp":{
+                    "regex": /^[a-z\u00C0-\u017F\ ]+$/i,
                     "alertText": "* Tähed ainult"
                 },
                 "onlyLetterNumber": {
